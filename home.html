@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,8 @@
     rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
 </head>
 
 <body>
@@ -23,23 +26,91 @@
         <a href=""><img class="logo" src="images/logo.png" alt=""></a>
     </header>
 
-    <main>
-        <div class="vaccine">
-            <div>
-                <img src="images/jeringas+.png" alt="">
-            </div>
-            <div class="mainText">
-                <p class="remind">
-                    REMIND PATIENTS TO<br>COMPLETE THE 2 -DOSE SERIES
-                </p>
-                <p class="the">
-                    The second dose should be administered<br>2 to 6 months after the first dose.
-                </p>
-            </div>
+    <div class="vaccine">
+
+        <div id="shingrix">
+            SHINGRIX is a vaccineindicated for prevention of herpes <br>
+            zoster (shingles) in adults 50 years and older. <br>
+            SHINGRIX is not indicated for prevention of primary <br>
+            varicella infection (chicken pox).
         </div>
+        <div id="help">
+            HELP ENSURE
+        </div>
+        <div id="they">
+            THEY COME BACK
+        </div>
+        <div id="remind">
+            REMIND PATIENTS TO <br>
+            COMPLETE THE 2-DOSE SERIES <br>
+            The second dose should be administrated <br>
+            2 to 6 months after de first dose.
+        </div>
+        <div id="jeringa1">
+            <img src="images/jeringa1.png" alt="">
+        </div>
+        <div id="jeringa2">
+            <img src="images/jeringa2.png" alt="">
+        </div>
+        <div id="mas">
+            <b>+</b>
+        </div>
+        <div id="learn">
+            <b>LEARN MORE  <i class="fas fa-caret-right"></i></b> 
+        </div>
+
+
+    </div>
+
+    <script>
+
+        let tl = new TimelineLite;
+
+        tl.to("#shingrix", 3, {
+        opacity: 0,
+        })
+        .to("#help", 2, {
+            opacity: 100
+        })
+        .to("#help", 2, {
+            ease: "circ.out",
+            opacity: 0
+        })
+        .to("#they", 2, {
+            ease: "circ.out",
+            opacity: 100
+        })
+        .to("#they", 2, {
+            ease: "circ.out",
+            opacity: 0
+        })
+        .to("#remind", 2, {
+            ease: "circ.out",
+            opacity: 100
+        })
+        .to("#jeringa1", 2, {
+            ease: "circ.out",
+            x: -310
+        })
+        .to("#jeringa2", 2, {
+            ease: "circ.out",
+            x: -280
+        })
+        .to("#mas", 2, {
+            opacity: 100
+        })
+        .to(".vaccine", 1, {
+            ease: "circ.out",
+            y: -10
+        })
+        .to("#learn", 2, {
+            opacity: 100
+        })
+
+    </script>
+
         
         <a class="prescribing" href=""><u>PRESCRIBING INFORMATION </u><i class="fas fa-angle-right"></i></a>
-    </main>
 
     <div class="scroll">
         <div class="scrollHere">
