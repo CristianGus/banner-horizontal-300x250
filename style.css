@@ -128,7 +128,7 @@ header{
 .vaccine{
     position: absolute;
     z-index: 1;
-    top: 80px;
+    top: 82px;
     left: 20px;
     display: flex;
 }
